@@ -13,7 +13,8 @@ untracked -> git add -> esta en area staging, trackeado, area temporal antes del
 
 git checkout ->
 
-
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
 
 
 
