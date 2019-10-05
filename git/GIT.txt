@@ -5,8 +5,10 @@ git commit -> El comando para almacenar definitivamente todos los cambios que po
 git commit -m "xxx"-> commit con mensaje
 git push -> subir commits a un servidor remoto, un lugar donde todos podamos conectar nuestros proyectos
 git status -> estado del repositorio
-git show -> muestra cambios historicos hechos
+git show <archivo> -> muestra cambios historicos hechos en un archivo, lineas borradas, nuevas,...
 git log <archivo> -> historia de un archivo
+git diff <commit1> <commit2> -> diferencias entre cambios. tomar id de los commits de git log.
+
 
 historia de un archivo
 untracked -> git add -> esta en area staging, trackeado, area temporal antes del repo -> git commit -> se va al repositorio
