@@ -1,0 +1,14 @@
+Node es un entorno de ejecucion para JS construido con el motor de Javascript V8 de Chrome.
+Capaz de ejecutar JS en ambientes de servidor, fuera de clientes web.
+
+code . -> abre visual code del proyecto
+
+REPL -> entorno virtual de Node
+node en consola para entrar
+-> Read Eval Print Loop
+-> manera fcail y rapida de ejecutar codigo Javascript
+-> es el shell de Node
+.exit para salir de REPL
+node <archivo.js> -> ejecuta archivo en consola
+
+
