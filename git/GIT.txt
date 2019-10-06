@@ -17,16 +17,31 @@ git reset <commit> -> volver a una version anterior
 git log --stat -> historia de archivos, cuantas lineas se modificaron, commits...
 q para salir!!!
 
-git checkout <commit> <archivo> -> ver el estado de ese archivo en ese commit
+git checkout <commit> <archivo> -> cambia al estado de ese archivo en ese commit, 
+git checkout master <archivo> -> vuelve al estado mas actual o ultimo commit hecho.
 
 
 historia de un archivo
 untracked -> git add -> esta en area staging, trackeado, area temporal antes del repo -> git commit -> se va al repositorio
 
-
-
 git config --global user.name "Your Name"
 git config --global user.email you@example.com
 
+ENTORNO DE DESARROLLO PERSONAL
+*Directrorio de trabajo 
+*Preparacion o staging
+*Repositorio local
 
+git clone <url> -> trae copia del master a Directorio de trabajo (tu carpeta personal, local: Documentos/proyecto) 
+    -> y crea tambien la BD de los cambios historicos en el repo local
+
+git push -> envio cambios de repo local a repo remoto o servidor
+git fetch -> trae actualizaciones del servidor al repo local, pero no lo copia a mis archivos!! no lo copia a mi directorio de trabajo
+git merge -> para que tambien copie archivos a mi Directorio de trabajo. 
+git pull -> abarca git fetch y git merge. Copia actualizaciones del remoto al local y directorio de trabajo
+
+
+HEAD es el commit mas reciente, al cabecera de commits
+
+Branch nueva -> copia el ultimo commit en otro lado
 
