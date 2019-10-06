@@ -14,10 +14,16 @@ git reset <commit> -> volver a una version anterior
     git reset <commit> --hard -> todo vuelve al estado anterior.
     git reset <commit> --soft -> lo que esta en staging, se queda en staging.
 
+git log --stat -> historia de archivos, cuantas lineas se modificaron, commits...
+q para salir!!!
+
+git checkout <commit> <archivo> -> ver el estado de ese archivo en ese commit
+
+
 historia de un archivo
 untracked -> git add -> esta en area staging, trackeado, area temporal antes del repo -> git commit -> se va al repositorio
 
-git checkout ->
+
 
 git config --global user.name "Your Name"
 git config --global user.email you@example.com
