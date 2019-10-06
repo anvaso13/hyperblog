@@ -1,5 +1,17 @@
 body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    color: chartreuse;
+    color: green;
+}
+
+#container{
+    width: 70%;
+    padding: 1em;
+    text-align: left;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+#container h1 {
+    
 }
