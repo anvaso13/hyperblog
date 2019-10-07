@@ -44,4 +44,17 @@ git pull -> abarca git fetch y git merge. Copia actualizaciones del remoto al lo
 HEAD es el commit mas reciente, al cabecera de commits
 
 Branch nueva -> copia el ultimo commit en otro lado
+git show -> me dice a donde apunta el HEAD, ademas de mostrar los ultimos cambios hechos (ultimo commit).
+git branch <nombre> -> crea una nueva branch
+git status -> seguimos en master. 
+git checkout <nombre de branch> -> para moverse a la branch mencionada
+
+EN MASTER! TRAERME LA RAMA CABECERA A MASTER
+git branch -> lista las branches
+git merge <nombre de branch> -> se trae el ultimo commit de <branch> a master o donde estes.
+hubo conflicto en archivo de estilos, lo arregle via visual studio code, y hay que hacer revisar:
+    git status
+    git commit de archivo arreglado
+    MERGE COMPLETO
+git log 
 
