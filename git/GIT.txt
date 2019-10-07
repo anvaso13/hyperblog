@@ -48,8 +48,6 @@ git show -> me dice a donde apunta el HEAD, ademas de mostrar los ultimos cambio
 git branch <nombre> -> crea una nueva branch
 git status -> seguimos en master. 
 git checkout <nombre de branch> -> para moverse a la branch mencionada
-<<<<<<< HEAD
-=======
 
 EN MASTER! TRAERME LA RAMA CABECERA A MASTER
 git branch -> lista las branches
@@ -59,5 +57,4 @@ hubo conflicto en archivo de estilos, lo arregle via visual studio code, y hay q
     git commit de archivo arreglado
     MERGE COMPLETO
 git log 
->>>>>>> cabecera
 
