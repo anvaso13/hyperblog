@@ -58,3 +58,4 @@ hubo conflicto en archivo de estilos, lo arregle via visual studio code, y hay q
     MERGE COMPLETO
 git log 
 
+git log --oneline --decorate --all --graph -> es un git log bonito
