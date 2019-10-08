@@ -59,3 +59,91 @@ hubo conflicto en archivo de estilos, lo arregle via visual studio code, y hay q
 git log 
 
 git log --oneline --decorate --all --graph -> es un git log bonito
+
+git init -> iniciar nuestro repositorio, o sea, indicarle a Git que queremos usar su sistema de control de versiones en nuestro proyecto.
+git add -> comando para que nuestro repositorio sepa de la existencia de un archivo o sus últimos cambios
+Este comando no almacena las actualizaciones de forma definitiva, solo las guarda en algo que conocemos como “Staging Area” (no te preocupes, lo entenderemos más adelante).
+git commit -> El comando para almacenar definitivamente todos los cambios que por ahora viven en el staging area
+git commit -m "xxx"-> commit con mensaje
+git push -> subir commits a un servidor remoto, un lugar donde todos podamos conectar nuestros proyectos
+git status -> estado del repositorio
+git show <archivo> -> muestra cambios historicos hechos en un archivo, lineas borradas, nuevas,...
+git log <archivo> -> historia de un archivo
+git diff <commit1> <commit2> -> diferencias entre cambios. tomar id de los commits de git log.
+
+git reset HEAD -- <archivo> -> quitar archivo de staging area
+git reset <commit> -> volver a una version anterior 
+    git reset <commit> --hard -> todo vuelve al estado anterior.
+    git reset <commit> --soft -> lo que esta en staging, se queda en staging.
+
+git log --stat -> historia de archivos, cuantas lineas se modificaron, commits...
+q para salir!!!
+
+git checkout <commit> <archivo> -> cambia al estado de ese archivo en ese commit, 
+git checkout master <archivo> -> vuelve al estado mas actual o ultimo commit hecho.
+
+
+historia de un archivo
+untracked -> git add -> esta en area staging, trackeado, area temporal antes del repo -> git commit -> se va al repositorio
+
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+ENTORNO DE DESARROLLO PERSONAL
+*Directrorio de trabajo 
+*Preparacion o staging
+*Repositorio local
+
+git clone <url> -> trae copia del master a Directorio de trabajo (tu carpeta personal, local: Documentos/proyecto) 
+    -> y crea tambien la BD de los cambios historicos en el repo local
+
+git push -> envio cambios de repo local a repo remoto o servidor
+git fetch -> trae actualizaciones del servidor al repo local, pero no lo copia a mis archivos!! no lo copia a mi directorio de trabajo
+git merge -> para que tambien copie archivos a mi Directorio de trabajo. 
+git pull -> abarca git fetch y git merge. Copia actualizaciones del remoto al local y directorio de trabajo
+
+
+HEAD es el commit mas reciente, al cabecera de commits
+
+Branch nueva -> copia el ultimo commit en otro lado
+git show -> me dice a donde apunta el HEAD, ademas de mostrar los ultimos cambios hechos (ultimo commit).
+git branch <nombre> -> crea una nueva branch
+git status -> seguimos en master. 
+git checkout <nombre de branch> -> para moverse a la branch mencionada
+
+EN MASTER! TRAERME LA RAMA CABECERA A MASTER
+git branch -> lista las branches
+git merge <nombre de branch> -> se trae el ultimo commit de <branch> a master o donde estes.
+hubo conflicto en archivo de estilos, lo arregle via visual studio code, y hay que hacer revisar:
+    git status
+    git commit de archivo arreglado
+    MERGE COMPLETO
+git log 
+
+git log --oneline --decorate --all --graph -> es un git log bonito
+
+******
+GENERANDO CONFLICTO INTENCIONALMENTE
+modificar mismas lineas
+- CABECERA
+    <span id="tagline">BLOG DE CABECERAAAA</span>
+    color: red; del BODY
+    git commit -am
+- MASTER
+    <span id="tagline">TU BLOG MAESTROOO</span>
+    color: blue;
+    parrafo agregado nuevo
+    git commit -am
+
+a mergear de master a CABECERA
+git checkout master
+git merge cabecera
+    pasa conflicto
+ir a archivos y decidir con que cambios quedarse y guardar
+git status
+git commit -am "Solucione conflicto de las ramas al fusionar"
+listo
+*****
+
+PARA AGREGAR UN ORIGEN REMOTO DE NUESTROS ARCHIVOS
+git remote add origin <url a clonar> 
