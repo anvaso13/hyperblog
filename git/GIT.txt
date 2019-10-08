@@ -147,3 +147,12 @@ listo
 
 PARA AGREGAR UN ORIGEN REMOTO DE NUESTROS ARCHIVOS
 git remote add origin <url a clonar> 
+git remote -> repositorios remotos
+git remote -v -> repositorios remotos con urls
+
+git push origin master -> envia al origen la rama master (master local)
+para esto, hay error porque en el remoto que creamos previamente, hay un archivo README
+por lo tanto hay que traerlo al local 
+git pull origin master -> trae los archivos del origen a la rama master local
+    arroja error "refusing to merge unrelated histories"
+    git pull origin master --allow-unrelated-histories -> permite fusionar lo que hay alla con la rama que tengo local
